@@ -1,5 +1,5 @@
 # redx-vue
-> 基于vue、vuex、vue-router实现的移动端框架模版
+> 基于vue、vuex、vue-router实现的移动端SPA框架模版
 
 ## Technologies
 
@@ -42,7 +42,7 @@ $ npm start
 |npm run deploy:start|Run static server to check `dist` files|
 
 
-## Customize
+## Regulation
 
 - 使用 ES6 编写
 - 数据使用vuex管理
@@ -52,41 +52,56 @@ $ npm start
 - i18n, validator，request 可以正常使用，components中的组件还不稳定，随时会改
 - 不限制使用何种 UI 组件，可以使用第三方，或自己开发（请尽量考虑复用性）
 - 尽量使用小的依赖库
-- 整体风格尽量向 [vue2.0](https://github.com/vuejs/vue/issues/2873) 靠拢，
+- 整体尽量向 [vue2.0](https://github.com/vuejs/vue/issues/2873) 靠近
 
 ## Directories
 ```
-src
-├── components                      #ui组件库
-├── plugins                         #插件库
-│   ├── i18n
-│   └── validator
-├── routes                          ＃路由
-├── static                          ＃静态文件
-│   ├── assets                      ＃其他资源文件
-│   ├── docs
-│   ├── i18n                        ＃国际化文件
-│   └── images
-├── themes                          ＃主题
-│   └── default
-│       ├── components              ＃ui组件库样式
-│       ├── fonts                   
-│       ├── images
-│       ├── mixins                  ＃postcss特性
-│       ├── variables               ＃postcss特性
-│       └── views                   ＃业务组件样式
-├── utils                           ＃公共库（request）
-├── views                           ＃业务组件
-│   ├── common                      ＃业务公共组件
-│   ├── demo                        ＃示例
-│   └── docs                        ＃文档
-└── vx                              ＃vuex数据管理
-    ├── actions
-    ├── constants
-    ├── getters
-    ├── middlewares
-    └── modules
+redx-vue
+├── bin
+├── build
+├── config
+├── server
+│   ├── lib
+│   └── middleware
+└── src                                 #核心代码
+    ├── components                      #ui组件库（目前自建）
+    ├── plugins                         #插件库
+    │   ├── i18n
+    │   └── validator
+    ├── routes                          ＃路由
+    ├── static                          ＃静态文件
+    │   ├── docs
+    │   ├── i18n                        
+    │   └── images
+    ├── themes                          ＃主题
+    │   └── default
+    │       ├── components              
+    │       ├── fonts                   
+    │       ├── images
+    │       ├── mixins                  
+    │       ├── variables               
+    │       └── views                   
+    ├── utils                           ＃公共库（request）
+    ├── views                           ＃业务组件
+    │   ├── common                      
+    │   ├── demo                        
+    │   └── docs                        
+    └── vx                              ＃vuex数据管理
+        ├── actions
+        ├── constants
+        ├── getters
+        ├── middlewares
+        └── modules
 ```
+
+## Link
+
+- [vue](https://github.com/vuejs/vue) 
+- [vue-router](https://github.com/vuejs/vue-router)
+- [vuex](https://github.com/vuejs/vuex)
+- [vue-resource](https://github.com/vuejs/vue-resource)
+- [vue-cli](https://github.com/vuejs/vue-cli)
+- [vue-devtools](https://github.com/vuejs/vue-devtools)
 
 ## License
 
