@@ -1,0 +1,68 @@
+html {
+  font: 1em/1.5 Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  color: color(black lightness(20%));
+  background-color: var(--background);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, form, ul, ol, pre, blockquote, textarea, input, figure, button {
+  margin: 0;
+}
+
+ul, ol, th, td, button, textarea, input {
+  padding: 0;
+}
+
+input, textarea, keygen, select, button {
+  font: 1rem/1.5 Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
+  color: color(black lightness(20%));
+}
+
+button, input, textarea {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+code, kbd, pre, samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: var(--secondary);
+  }
+}
+
+article, footer, header, nav, section {
+  display: block;
+}

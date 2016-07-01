@@ -1,0 +1,30 @@
+{
+  "header": {
+    "title": "App框架"
+  },
+  "footer": {
+    "user" : "个人中心",
+    "index" : "首页",
+    "cart" : "购物车",
+    "community" : "社区"
+  },
+  "routes": {
+    "demo" : "示例",
+    "docs": "文档",
+    "about": "关于",
+    "login": "登录",
+    "logout": "注销"
+  },
+  "demo": {
+    "form": "表单"
+  },
+  "view": {
+    "message": "{0}，好的开始是成功的一半！",
+    "home": {
+      "language": "语言",
+      "example": "例子",
+      "about": "关于",
+      "latest_commits": "最新提交"
+    }
+  }
+}

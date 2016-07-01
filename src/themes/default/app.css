@@ -1,0 +1,50 @@
+@import "reset";
+@import "fonts/iconfont";
+
+.container {
+  padding: 4rem 0 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.content{
+  overflow: scroll;
+  -webkit-box-flex: 1;
+  height: 38.4rem;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.link-active {
+  color: var(--primary);
+}
+
+.slide-transition {
+  transition: all .5s ease;
+}
+.slide-enter,
+.slide-leave {
+  opacity: 0;
+  transform: translate3d(0, -1rem, 0);
+}
+
+.slide-up-transition {
+  transition: all .5s ease;
+}
+.slide-up-enter,
+.slide-up-leave {
+  opacity: 0;
+  transform: translate3d(0, 1rem, 0);
+}
+
+.fade-transition {
+  transition: all .5s ease;
+}
+.fade-enter,
+.fade-leave {
+  opacity: 0;
+}

@@ -1,0 +1,70 @@
+.c-checkbox {
+  height: 1.5rem;
+
+  & input {
+    appearance: none;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  & span {
+    display: inline-block;
+    vertical-align: top;
+    /*transform: translateY(-1px);*/
+    margin: 0 -1rem 0 0;
+    transition: margin 0.5s ease;
+  }
+
+  /* as background */
+  & label {
+    display: inline-block;
+    text-align: center;
+    min-width: 3rem;
+    height: 1.5rem;
+    border: 1px solid color(white lightness(80%));
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    background: color(white lightness(80%));
+    transition: color 0.5s ease;
+
+    /* as a dot */
+    &:before,
+    &:after {
+      content: "\20";
+      display: inline-block;
+      vertical-align: top;
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 0.7rem;
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      transition: transform 0.5s ease;
+    }
+
+    /* as label */
+    &:after {
+      transform: scale3d(0, 0, 0);
+    }
+  }
+
+  &.checked {
+    & span {
+      margin: 0 0 0 -1rem;
+    }
+
+    & label {
+      color: white;
+      border-color: var(--primary);
+      background-color: var(--primary);
+
+      &:before {
+        transform: scale3d(0, 0, 0);
+      }
+
+      &:after {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+}

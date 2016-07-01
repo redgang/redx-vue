@@ -1,0 +1,81 @@
+.c-datepicker {
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.c-datepicker-mask {
+}
+
+.c-datepicker-body {
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid color(black lightness(80%));
+  outline: none;
+  text-align: center;
+
+  & a {
+    cursor: pointer;
+  }
+
+  & i {
+    width: 2rem;
+    text-align: center;
+    font-style: normal;
+    font-size: 0.8rem;
+  }
+
+  & b {
+    flex: auto;
+    font-weight: normal;
+  }
+}
+
+.c-datepicker-header {
+  display: flex;
+  flex-direction: row;
+  line-height: 2rem;
+  border-bottom: 1px solid color(white lightness(-10%));
+}
+
+.c-datepicker-content {
+  display: flex;
+  flex-direction: row;
+  height: 14rem;
+
+  & i {
+    line-height: 14rem;
+  }
+
+  & > div {
+    flex: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  & span {
+    cursor: pointer;
+    display: block;
+    /*box-sizing: border-box;*/
+    height: 2rem;
+    line-height: 2rem;
+
+    &:hover {
+      background-color: color(white lightness(90%));
+    }
+
+    &.today {
+      color: var(--secondary);
+    }
+
+    &.selected {
+      color: var(--primary);
+    }
+  }
+}

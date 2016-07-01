@@ -1,0 +1,11 @@
+.v-docs {
+  & ul {
+    padding-left: 2em;
+    list-style-type: circle;
+  }
+}
+
+.markdown-body {
+  padding: 1rem 0 0;
+  border-top: 1px solid color(white lightness(-10%));
+}

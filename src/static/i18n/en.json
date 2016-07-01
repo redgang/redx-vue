@@ -1,0 +1,30 @@
+{
+  "header": {
+    "title": "Vue-App"
+  },
+  "footer": {
+    "user" : "User",
+    "index" : "Index",
+    "cart" : "Cart",
+    "community" : "Community"
+  },
+  "routes": {
+    "demo" : "Demo",
+    "docs": "Documentation",
+    "about": "About",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "demo": {
+    "form": "form"
+  },
+  "view": {
+    "message": "{0}, The beginning is the most important part of the work.",
+    "home": {
+      "language": "Language",
+      "example": "Examples",
+      "about": "About",
+      "latest_commits": "Latest Commits"
+    }
+  }
+}

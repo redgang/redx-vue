@@ -1,0 +1,12 @@
+.c-group {
+  margin: 0.5rem 0;
+}
+
+.c-group-title {
+}
+
+.c-group-cells {
+  background-color: white;
+  border: 1px solid color(white lightness(-10%));
+  border-radius: 0.25rem;
+}

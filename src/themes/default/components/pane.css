@@ -1,0 +1,11 @@
+.c-pane {
+  margin: 1rem;
+
+  &.vertical {
+    margin: 1rem 0;
+  }
+
+  &.horizontal {
+    margin: 0 1rem;
+  }
+}

@@ -1,0 +1,14 @@
+.c-flex {
+  flex: auto;
+  text-align: inherit;
+
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+}

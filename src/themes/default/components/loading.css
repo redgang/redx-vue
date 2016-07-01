@@ -1,0 +1,33 @@
+.c-loading {
+  text-align: center;
+}
+
+.c-loading-snake {
+  animation: c-loading-snake-rotate .8s infinite linear;
+  border: 4px solid transparent;
+  border-top-color: rgb(204, 204, 204);
+  border-left-color: rgb(204, 204, 204);
+  border-bottom-color: rgb(204, 204, 204);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+}
+
+@-webkit-keyframes c-loading-snake-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes c-loading-snake-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

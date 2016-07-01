@@ -1,0 +1,14 @@
+.c-select {
+  @mixin field-present;
+  /* for android */
+  height: 1.5rem;
+}
+
+.c-select-item {
+  @mixin field-editing;
+  appearance: none;
+  border-radius: 0.25rem;
+  margin: 0;
+  padding: 0 1.1rem 0 0.3rem;
+  background: transparent url('../images/down.svg') no-repeat right center;
+}

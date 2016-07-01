@@ -1,0 +1,33 @@
+.c-modal {
+}
+
+.c-modal-content {
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.c-modal-body {
+  text-align: center;
+  padding: 1rem;
+}
+
+.c-modal-footer {
+  border-top: 1px solid color(white lightness(90%));
+
+  &:empty {
+    border-top: none;
+  }
+
+  & .c-cell {
+    padding: 1rem 0 0;
+    margin: 0 -0.5rem;
+  }
+
+  & .c-flex {
+    margin: 0 0.5rem;
+  }
+}

@@ -1,0 +1,10 @@
+.c-multiline {
+  @mixin field-present;
+}
+
+.c-multiline-textarea {
+  @mixin field-editing;
+  resize: none;
+  display: block;
+  text-align: left;
+}

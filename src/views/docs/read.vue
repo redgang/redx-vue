@@ -1,0 +1,32 @@
+<template>
+  <div class="v-docs-read">
+    <c-pane class="markdown-body">{{{ content }}}</c-pane>
+  </div>
+</template>
+
+<script>
+import marked from 'marked'
+import request from 'utils/request'
+import CPane from 'components/c-pane'
+export default {
+  data () {
+    return {
+      content: ''
+    }
+  },
+
+  route: {
+    data () {
+      request(`./docs/${this.$route.params.name}`).then(text => {
+        this.content = marked(text)
+      })
+    }
+  },
+
+  components: {
+    CPane
+  }
+}
+</script>
+
+<style src="styles/markdown"></style>

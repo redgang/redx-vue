@@ -1,0 +1,60 @@
+.c-group-cell {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  border-top: 1px solid color(white lightness(-10%));
+
+  &:first-child {
+    border-top: none;
+    border-radius: inherit;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  &:active {
+    background-color: color(var(--secondary) alpha(10%))
+  }
+}
+
+.c-group-cell-icon {
+  flex: none;
+  margin-right: 0.3em;
+}
+
+.c-group-cell-label {
+  flex: none;
+  margin-right: 0.3em;
+}
+
+.c-group-cell-value {
+  flex: auto;
+  color: color(black lightness(+40%));
+  text-align: right;
+  outline: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: inherit;
+  display: block;
+  text-decoration: none;
+
+  &.link {
+    &:after {
+      content: "\20";
+      display: inline-block;
+      transform: rotateZ(45deg);
+      height: 0.5em;
+      width: 0.5em;
+      border-width: 0.125em 0.125em 0 0;
+      border-color: color(black lightness(+60%));
+      border-style: solid;
+      position: relative;
+      top: -0.0625em;
+      left: 0.25em;
+    }
+  }
+}

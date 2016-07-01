@@ -1,0 +1,44 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        "es2015",
+        "es2015-rollup",
+        "stage-0"
+      ],
+      "plugins": [
+        "add-module-exports",
+        "transform-async-to-generator",
+        "transform-runtime"
+      ],
+      "comments": false
+    },
+    "test": {
+      "presets": [
+        "es2015",
+        "es2015-rollup",
+        "stage-0"
+      ],
+      "plugins": [
+        "add-module-exports",
+        "__coverage__",
+        "transform-async-to-generator",
+        "transform-runtime"
+      ],
+      "comments": false
+    },
+    "production": {
+      "presets": [
+        "es2015",
+        "es2015-rollup",
+        "stage-0"
+      ],
+      "plugins": [
+        "add-module-exports",
+        "transform-async-to-generator",
+        "transform-runtime"
+      ],
+      "comments": false
+    }
+  }
+}

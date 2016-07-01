@@ -1,0 +1,67 @@
+.c-navbar {
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+}
+
+.c-navbar-toggle {
+  position: absolute;
+  z-index: 102;
+  right: 0;
+  width: 4rem;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 4rem;
+  text-align: center;
+
+  &.active {
+    color: var(--primary);
+  }
+}
+
+.c-navbar-menu {
+  position: absolute;
+  z-index: 103;
+  top: 4rem;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 1px 3px color(white lightness(-20%));
+
+  & li {
+    & ul {
+      display: none;
+    }
+
+    & li {
+      display: block;
+
+      & a {
+        display: block;
+      }
+    }
+
+    &:active {
+      & ul {
+        display: block;
+        background-color: color(white lightness(-10%));
+      }
+    }
+  }
+
+  & a {
+    display: block;
+    padding: 0 1rem;
+    line-height: 4rem;
+    text-decoration: none;
+    text-align: center;
+
+    &:active {
+      background-color: color(white lightness(-5%));
+    }
+
+    &.link-active {
+      color: var(--secondary);
+      background-color: color(var(--secondary) lightness(95%));
+    }
+  }
+}

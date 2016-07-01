@@ -1,0 +1,74 @@
+.c-form-cell {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  border-top: 1px solid color(white lightness(-10%));
+
+  &:first-child {
+    border-top: none;
+    border-radius: inherit;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  &:active {
+    background-color: color(var(--secondary) alpha(10%))
+  }
+}
+
+.c-form-cell-icon {
+  flex: none;
+  margin-right: 0.3em;
+}
+
+.c-form-cell-label {
+  flex: none;
+  margin-right: 0.3em;
+}
+
+.c-form-cell-value {
+  flex: auto;
+  text-align: right;
+}
+
+/* 输入框独占一行 */
+.c-form-expand {
+  & .c-form-cell {
+    display: block;
+  }
+
+  & .c-form-cell-icon {
+    flex: none;
+    display: inline-block;
+  }
+
+  & .c-form-cell-label {
+    flex: none;
+    display: inline-block;
+  }
+
+  & .c-form-cell-value {
+    flex: none;
+    text-align: left;
+  }
+
+  & .c-textfield-input,
+  & .c-password-input {
+    text-align: left;
+  }
+
+  & .c-password-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: auto;
+  }
+
+  & .c-password-input {
+    padding-right: 1.8rem;
+    padding-left: 0;
+  }
+}

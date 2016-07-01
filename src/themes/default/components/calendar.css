@@ -1,0 +1,114 @@
+.c-calendar {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 14rem;
+  border: 1px solid color(black lightness(80%));
+  outline: none;
+  text-align: center;
+
+  & a {
+    cursor: pointer;
+  }
+
+  & span {
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: color(white lightness(90%));
+    }
+
+    &.today {
+      color: var(--secondary);
+    }
+
+    &.selected {
+      color: var(--primary);
+    }
+  }
+}
+
+.c-calendar-header {
+  font-size: 1.5em;
+}
+
+.c-calendar-content {
+  &:after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+}
+
+.c-calendar-years,
+.c-calendar-months {
+  padding: 1rem;
+  font-weight: bold;
+
+  & span {
+    width: 4rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-top: 1px solid color(white lightness(90%));
+    border-left: 1px solid color(white lightness(90%));
+
+    &:nth-child(3n) {
+      border-right: 1px solid color(white lightness(90%));
+    }
+
+    &:nth-child(10),
+    &:nth-child(11),
+    &:nth-child(12) {
+      border-bottom: 1px solid color(white lightness(90%));
+    }
+  }
+}
+
+.c-calendar-days {
+  height: 2rem;
+  font-weight: bold;
+
+  & span {
+    cursor: default;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.c-calendar-dates {
+  & span {
+    &.empty {
+      cursor: default;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.c-calendar-hours,
+.c-calendar-minutes,
+.c-calendar-seconds {
+  padding: 1rem;
+}
+
+.c-calendar-minutes,
+.c-calendar-seconds {
+  & span {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+  }
+}
+
+.c-calendar-footer {
+  font-size: 1.5em;
+}

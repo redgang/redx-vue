@@ -1,0 +1,26 @@
+.c-footer{
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--footer);
+
+    & li {
+        line-height: 4rem;
+        width: 25%;
+        text-align: center;
+        float: left;
+
+        &  a {
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            
+            & .link-active {
+                color: white;
+            }
+        }
+    }
+}

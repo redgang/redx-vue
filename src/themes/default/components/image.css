@@ -1,0 +1,17 @@
+.c-image {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /*&:after {
+    content: "\20";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }*/
+}
+
+.c-image-img {
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
+}

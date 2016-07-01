@@ -1,0 +1,28 @@
+.c-cell {
+  padding: 1rem;
+  border-top: 1px solid color(white lightness(-10%));
+
+  &.row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:first-child {
+    border-top: none;
+    border-radius: inherit;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  &:active {
+    background-color: color(var(--secondary) alpha(10%))
+  }
+}

@@ -1,0 +1,50 @@
+.c-header {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: var(--secondary);
+}
+
+.c-header-history {
+  & .c-button {
+    position: absolute;
+    z-index: 1;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+
+    &:active {
+      color: var(--primary);
+      background-color: transparent;
+    }
+  }
+
+  & .c-route-link {
+    color: white;
+  }
+}
+
+.c-header-logo {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  & a {
+    display: block;
+    height: 4rem;
+    color: white;
+    font-size: 1.0em;
+    line-height: 4rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  & .link-active {
+    color: white;
+  }
+}
