@@ -7,7 +7,7 @@
     <div class="c-picker-column-scroller"></div>
     <div class="c-picker-column-content"
       :style="{transform: transform}">
-      <span v-for="item in items" track-by="$index">{{item.label}}</span>
+      <span v-for="(index, item) in items" track-by="index">{{item.label}}</span>
     </div>
   </div>
 </template>

@@ -9,13 +9,13 @@
     <div class="c-datepicker-body"
       @touchmove.prevent>
       <div class="c-datepicker-header">
-        <template v-for="column in columns" track-by="$index">
+        <template v-for="(index, column) in columns" track-by="index">
           <b v-if="column.type === 'picker'">{{zeroPad(column.value)}}</b>
           <i v-else>{{column}}</i>
         </template>
       </div>
       <div class="c-datepicker-content">
-        <template v-for="column in columns" track-by="$index">
+        <template v-for="(index, column) in columns" track-by="index">
           <c-picker-column v-if="column.type === 'picker'"
             :class="column.class"
             :size="size"

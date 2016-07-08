@@ -9,11 +9,11 @@
       <div class="c-form-cells"
         v-if="items">
         <c-form-cell
-          v-for="cell in cells"
-          :field="$key"
+          v-for="(key, cell) in cells"
+          :field="key"
           :model="cell"
-          :value="items[$key]"
-          @mutate="_mutate($key, $arguments)"></c-form-cell>
+          :value="items[key]"
+          @mutate="_mutate(key, $arguments)"></c-form-cell>
       </div>
       <slot name="footer"></slot>
     </form>

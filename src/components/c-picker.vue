@@ -21,7 +21,7 @@
         </div>
         <div class="c-picker-popup-content">
           <c-picker-column v-for="(index, items) in extra.data"
-            track-by="$index"
+            track-by="index"
             :value="value[index]"
             :items="items"
             @mutate="mutate(index, $arguments)"
