@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Vuex from 'vuex-fsa'
+import Vuex from 'vuex'
 import modules from './modules'
-import middlewares from './middlewares'
+import plugins from './plugins'
 
 // for testing
 if (navigator.userAgent.indexOf('PhantomJS') > -1) {
@@ -13,5 +13,5 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: __DEV__,
   modules,
-  middlewares
+  plugins
 })

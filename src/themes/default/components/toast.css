@@ -10,7 +10,7 @@
     margin: 0 0 0.25rem;
     padding: 0.5rem;
     min-width: 12rem;
-    background: white;
+    background-color: var(--error);
 
     & .name {
       &:before {

@@ -2,14 +2,26 @@
 > 基于vue、vuex、vue-router实现的移动端SPA框架模版
 
 ## Technologies
-
 - Vue
-- Vuex(vuex-fsa)
+- Vuex
 - Vue-Router
 - PostCSS
 - Webpack
 - Koa
 - ES6
+
+## Change Logs
+- 2016-7-8
+  - 升级vuex，将vuex-fsa升级到vuex的^1.0.0-rc.2版本
+  - 修改中间件文件夹middlewares->plugins，用法与官方统一[vuex1.0](http://vuex.vuejs.org/en/plugins.html)
+  - 规范v-for指令用法
+  - 更新相关文档
+  - 引入postcss-functions，支持css中运用function
+  - 修改toast错误提示背景色
+
+## Plans
+- 修改c-form组件用法
+- 添加banner图片滚动组件c-swipe
 
 ## Quick Start
 
@@ -31,7 +43,6 @@ $ npm start
 ```
 
 ## Usage
-
 |Command|Description|
 |---|---|
 |npm install|Install dependencies|
@@ -43,7 +54,6 @@ $ npm start
 
 
 ## Regulation
-
 - 使用 ES6 编写
 - 数据使用vuex管理
 - 使用 .vue 单文件组件，组件中不建议直接写css
@@ -53,6 +63,10 @@ $ npm start
 - 不限制使用何种 UI 组件，可以使用第三方，或自己开发（请尽量考虑复用性）
 - 尽量使用小的依赖库
 - 整体尽量向 [vue2.0](https://github.com/vuejs/vue/issues/2873) 靠近
+- v-for中禁止使用$index and $key，vue2.0会去掉
+- 禁止使用partials、elementDirective、$dispatch、$broadcast等
+- v-model 中的debounce尽量少用
+
 
 ## Directories
 ```
@@ -90,18 +104,18 @@ redx-vue
         ├── actions
         ├── constants
         ├── getters
-        ├── middlewares
+        ├── plugins
         └── modules
 ```
 
 ## Link
-
 - [vue](https://github.com/vuejs/vue) 
 - [vue-router](https://github.com/vuejs/vue-router)
 - [vuex](https://github.com/vuejs/vuex)
 - [vue-resource](https://github.com/vuejs/vue-resource)
 - [vue-cli](https://github.com/vuejs/vue-cli)
 - [vue-devtools](https://github.com/vuejs/vue-devtools)
+- [awesome-vue](https://github.com/vuejs/awesome-vue)
 
 ## License
 

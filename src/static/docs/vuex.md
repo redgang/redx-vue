@@ -8,7 +8,8 @@
 
 ### 依赖
 
-[`vuex-fsa`](https://www.npmjs.com/package/vuex-fsa)：支持 FSA ([flux-standard-action](https://github.com/acdlite/flux-standard-action)) 的 vuex
+[`vuex`](https://github.com/vuejs/vuex)
+
 
 ### 用法
 
@@ -17,16 +18,16 @@
 ``` js
 // vx/store.js
 import Vue from 'vue'
-import Vuex from 'vuex-fsa'
+import Vuex from 'vuex'
 import modules from './modules'
-import middlewares from './middlewares'
+import plugins from './plugins'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   strict: process.env.NODE_ENV === 'development',
   modules,
-  middlewares
+  plugins
 })
 ```
 

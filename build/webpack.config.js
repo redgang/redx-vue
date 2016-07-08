@@ -48,6 +48,13 @@ webpackConfig.vue = {
           require('postcss-mixins')({
             mixinsDir: paths.client('themes/default/mixins')
           }),
+          require('postcss-functions')({
+            functions : {
+              pxToRem : function($px) {
+	              return $px*320/750/20 + 'rem';
+              }
+            }
+          }),
           require('postcss-cssnext')({
             // see: https://github.com/ai/browserslist#queries
             browsers: 'Android >= 4, iOS >= 7'

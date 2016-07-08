@@ -6,9 +6,11 @@ export default (config) => ({
   proxy: {
     enabled: true,
     options: {
-      // koa-proxy options
-      host: 'http://172.19.5.209:8088/',
-      fileServiceUrl : 'http://172.19.6.131:8081/',
+      // api请求接口服务器地址，例如：http://192.168.1.209:8088/
+      host: '/',
+      // 文件、图片服务器地址， 例如：http://192.168.1.131:8081/
+      fileServiceUrl : '/',
+      //文件、图片请求路径标识
       fileProxyFlag : 'file-service',
       match: /^\/api|file-service\/.*/,
       hook: (opt) => {

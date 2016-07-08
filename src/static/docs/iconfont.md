@@ -31,6 +31,3 @@
 0. ...
 
 ### 存在问题
-
-- 与 `transition-mode="out-in/in-out"` 共用导致页面假死
-- Android 4.x 部分 Webview 不支持连体字符

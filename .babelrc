@@ -3,7 +3,6 @@
     "development": {
       "presets": [
         "es2015",
-        "es2015-rollup",
         "stage-0"
       ],
       "plugins": [
@@ -16,7 +15,6 @@
     "test": {
       "presets": [
         "es2015",
-        "es2015-rollup",
         "stage-0"
       ],
       "plugins": [
@@ -30,7 +28,6 @@
     "production": {
       "presets": [
         "es2015",
-        "es2015-rollup",
         "stage-0"
       ],
       "plugins": [
