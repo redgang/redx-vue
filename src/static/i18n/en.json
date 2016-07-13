@@ -16,7 +16,8 @@
     "logout": "Logout"
   },
   "demo": {
-    "form": "form"
+    "form": "form",
+    "swipe" : "swipe"
   },
   "view": {
     "message": "{0}, The beginning is the most important part of the work.",

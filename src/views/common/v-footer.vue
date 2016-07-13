@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import CRoute from 'components/c-route'
+    import { CRoute } from 'components'
 
     export default {
       props: {

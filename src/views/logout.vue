@@ -6,8 +6,7 @@
 </template>
 
 <script>
-import CImage from 'components/c-image'
-import CModal from 'components/c-modal'
+import { CImage, CModal } from 'components'
 import { setEnv } from 'vx/actions'
 export default {
   data () {

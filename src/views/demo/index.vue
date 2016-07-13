@@ -8,9 +8,7 @@
 </template>
 
 <script>
-  import CPane from 'components/c-pane'
-  import CGroup from 'components/c-group'
-  import CTitle from 'components/c-title'
+  import { CPane, CGroup, CTitle } from 'components'
 
   export default {
     computed: {
@@ -23,6 +21,15 @@
             value: this.__('demo.form'),
             click () {
               router.go('/demo/form')
+            },
+            extra: {
+              isLink: true
+            }
+          }, {
+            label: 'swipe',
+            value: this.__('demo.swipe'),
+            click () {
+              router.go('/demo/swipe')
             },
             extra: {
               isLink: true

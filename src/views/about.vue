@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CPane from 'components/c-pane'
+import { CPane } from 'components'
 export default {
   components: {
     CPane

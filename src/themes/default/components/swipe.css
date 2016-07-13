@@ -1,0 +1,42 @@
+.c-swipe {
+    overflow: hidden;
+    position: relative;
+}
+.c-swipe-items {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.c-swipe-items > div {
+    position: absolute;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.c-swipe-items > div.active {
+    display: block;
+    transform: none;
+}
+
+.c-swipe-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.c-swipe-indicator {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: 0.2;
+    margin: 0 3px;
+}
+
+.c-swipe-indicator.active {
+    background: #fff;
+}
+

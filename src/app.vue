@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import CProgress from 'components/c-progress'
-import CToast from 'components/c-toast'
+import { CProgress, CToast } from 'components'
+
 import VHeader from 'views/common/v-header'
 import VFooter from 'views/common/v-footer'
 import store from 'vx/store'

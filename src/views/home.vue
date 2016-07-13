@@ -17,21 +17,14 @@
         <small class="date">@ {{record.commit.author.date | datetime 'yyyy-MM-dd hh:mm'}}</small>
       </c-cell>
     </c-pane>
-    <c-image src="images/logo.png" 
-      width="200"
-      height="200"></c-image>
+    <c-image src="images/logo.png" width="200" height="200"></c-image>
   </div>
 </template>
 
 <script>
 import datetime from 'nd-datetime'
-import CForm from 'components/c-form'
-import CPane from 'components/c-pane'
-import CGroup from 'components/c-group'
-import CTitle from 'components/c-title'
-import CLoading from 'components/c-loading'
-import CImage from 'components/c-image'
-import CCell from 'components/c-cell'
+import { CForm, CPane, CGroup, CTitle, CLoading, CImage, CCell } from 'components'
+
 import { commits } from 'vx/getters'
 import { setEnv, getCommits } from 'vx/actions'
 export default {

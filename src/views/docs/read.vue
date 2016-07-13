@@ -7,7 +7,7 @@
 <script>
 import marked from 'marked'
 import request from 'utils/request'
-import CPane from 'components/c-pane'
+import { CPane } from 'components'
 export default {
   data () {
     return {

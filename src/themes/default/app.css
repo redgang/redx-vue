@@ -12,7 +12,8 @@
 .content{
   overflow: scroll;
   -webkit-box-flex: 1;
-  height: 38.4rem;
+  /*height: 38.4rem;*/
+  height:100%
 }
 
 [v-cloak] {

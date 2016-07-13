@@ -7,6 +7,10 @@ export default {
     '/form': {
       name: 'demo/form',
       component: resolve => require(['views/demo/form'], resolve)
+    },
+    '/swipe': {
+      name: 'demo/swipe',
+      component: resolve => require(['views/demo/swipe'], resolve)
     }
   }
 }

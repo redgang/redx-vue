@@ -19,10 +19,7 @@
 </template>
 
 <script>
-import CValidation from 'components/c-validation'
-import CPane from 'components/c-pane'
-import CForm from 'components/c-form'
-import CButton from 'components/c-button'
+import { CValidation, CPane, CForm, CButton } from 'components'
 import { setEnv } from 'vx/actions'
 export default {
   data () {

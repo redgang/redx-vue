@@ -18,11 +18,7 @@
 </template>
 
 <script>
-    import CButton from 'components/c-button'
-    import CIcon from 'components/c-icon'
-    import CNavbar from 'components/c-navbar'
-    import CRoute from 'components/c-route'
-    import CRouteLink from 'components/c-route-link'
+    import { CRoute, CRouteLink, CButton, CIcon, CNavbar } from 'components'
 
     export default {
       props: {

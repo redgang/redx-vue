@@ -14,8 +14,7 @@
 
 <script>
 import request from 'utils/request'
-import CPane from 'components/c-pane'
-import CSelect from 'components/c-select'
+import { CPane, CSelect } from 'components'
 export default {
   data () {
     return {

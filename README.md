@@ -18,10 +18,18 @@
   - 更新相关文档
   - 引入postcss-functions，支持css中运用function
   - 修改toast错误提示背景色
+- 2016-7-13
+  - 添加c-swipe组件
+  - 添加swipe例子
+  - 简化components组件引用方式
+  - 修改eslint配置项
 
 ## Plans
 - 修改c-form组件用法
-- 添加banner图片滚动组件c-swipe
+- 升级到`vuex2.0`
+- 添加c-iscroll组件
+- 修改c-image组件，支持Lazyload
+
 
 ## Quick Start
 
