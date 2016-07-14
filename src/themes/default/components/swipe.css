@@ -6,18 +6,19 @@
     position: relative;
     overflow: hidden;
     height: 100%;
-}
-.c-swipe-items > div {
-    position: absolute;
-    transform: translateX(-100%);
-    width: 100%;
-    height: 100%;
-    display: none;
-}
 
-.c-swipe-items > div.active {
-    display: block;
-    transform: none;
+    &>div {
+        position: absolute;
+        transform: translateX(-100%);
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        &.active {
+            display: block;
+            transform: none;
+        }
+    }
 }
 
 .c-swipe-indicators {
@@ -34,9 +35,9 @@
     background: #000;
     opacity: 0.2;
     margin: 0 3px;
-}
 
-.c-swipe-indicator.active {
-    background: #fff;
+    &.active {
+        background: #fff;
+    }
 }
 
