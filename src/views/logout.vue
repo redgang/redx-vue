@@ -7,7 +7,8 @@
 
 <script>
 import { CImage, CModal } from 'components'
-import { setEnv } from 'vx/actions'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   data () {
     return {
@@ -27,21 +28,19 @@ export default {
 
   route: {
     activate () {
-      if (!this.env.authorized) {
+      if (!this.authorized) {
         history.back()
         return
       }
     }
   },
 
-  vuex: {
-    actions: {
-      setEnv
-    }
-  },
+  computed: mapGetters(['authorized']),
+
+  methods: mapActions(['setEnv']),
 
   watch: {
-    'env.authorized' (val) {
+    'authorized' (val) {
       if (!val) {
         this.$nextTick(() => {
           this.$route.router.go('/')

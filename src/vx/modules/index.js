@@ -1,6 +1,6 @@
-const modulesContext = require.context('./', false, /\.js$/)
+const mutationsContext = require.context('./', false, /\.js$/)
 
-export default modulesContext.keys().filter(v => v !== './index.js').reduce((modules, key) => {
-  modules[key.replace(/(^\.\/)|(\.js$)/g, '')] = modulesContext(key)
-  return modules
+export default mutationsContext.keys().filter(v => v !== './index.js').reduce((mutations, key) => {
+  mutations[key.replace(/(^\.\/)|(\.js$)/g, '')] = mutationsContext(key)
+  return mutations
 }, {})

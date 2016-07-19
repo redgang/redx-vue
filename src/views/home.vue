@@ -3,7 +3,7 @@
     <c-pane>
       <c-form
         :cells="cells"
-        :items="{lang: env.lang}"
+        :items="{lang: lang}"
         @mutate="setEnv"></c-form>
     </c-pane>
     <c-pane class="quatation">
@@ -24,9 +24,8 @@
 <script>
 import datetime from 'nd-datetime'
 import { CForm, CPane, CGroup, CTitle, CLoading, CImage, CCell } from 'components'
+import { mapGetters, mapActions } from 'vuex'
 
-import { commits } from 'vx/getters'
-import { setEnv, getCommits } from 'vx/actions'
 export default {
   data () {
     return {
@@ -36,6 +35,7 @@ export default {
   },
 
   computed: {
+    ...mapGetters(['lang', 'commits']),
     cells () {
       return {
         lang: {
@@ -58,18 +58,10 @@ export default {
     }
   },
 
+  methods: mapActions(['setEnv', 'getCommits']),
+
   ready () {
     this.getCommits()
-  },
-
-  vuex: {
-    getters: {
-      commits
-    },
-    actions: {
-      setEnv,
-      getCommits
-    }
   },
 
   filters: {

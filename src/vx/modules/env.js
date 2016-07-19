@@ -1,39 +1,52 @@
-import createPersist from 'vuex-localstorage'
+import createPersist from '../../utils/store'
+import request from 'utils/request'
+import { SET_ENV, SET_ENV_I18N, ENV_KEY, PROMISE_SUCCESS } from '../constants'
 
-import {
-  SET_ENV,
-  SET_ENV_I18N,
-  ENV_KEY,
-  PROMISE_SUCCESS
-} from '../constants'
-
-const persist = createPersist(ENV_KEY, {
+const localEnv = createPersist(ENV_KEY, {
   lang: navigator.language.split('-')[0],
-  i18n: {},
+  i18n: null,
   authorized: false
 })
 
-const state = {
-  env: persist.get()
+const state = localEnv.get()
+
+const getters = {
+  lang: state => state.lang,
+  i18n: state => state.i18n,
+  authorized: state => state.authorized
 }
 
 const mutations = {
   [SET_ENV] (state, payload) {
-    Object.assign(state.env, payload)
-    persist.set(state.env)
+    Object.assign(state, payload)
+    localEnv.set(state)
   },
 
   [SET_ENV_I18N] (state, { payload, meta }) {
     if (meta === PROMISE_SUCCESS) {
-      Object.assign(state.env, {
+      Object.assign(state, {
         i18n: payload
       })
-      persist.set(state.env)
+      localEnv.set(state)
+    }
+  }
+}
+
+const actions = {
+  setEnv ({ commit }, payload) {
+    commit(SET_ENV, payload)
+
+    if (payload.lang) {
+      commit(SET_ENV_I18N, request({
+        url: `./i18n/${payload.lang}.json`
+      }))
     }
   }
 }
 
 export default {
   state,
+  getters,
+  actions,
   mutations
 }

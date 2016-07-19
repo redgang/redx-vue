@@ -1,6 +1,6 @@
 {
   "name": "redx-vue",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "基于vue、vue-router、vuex、webpack、postcss等实现移动端SPA解决方案",
   "main": "index.js",
   "engines": {
@@ -144,9 +144,7 @@
     "string-template": "^1.0.0",
     "vue": "^1.0.26",
     "vue-router": "^0.7.13",
-    "vuex": "^1.0.0-rc.2",
-    "vuex-localstorage": "^0.1.2",
-    "vuex-promise": "^1.0.2",
+    "vuex": "^2.0.0-rc.3",
     "whatwg-fetch": "^1.0.0",
     "wind-dom": "0.0.3"
   }

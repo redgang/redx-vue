@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import CPane from 'components/c-pane'
-import CForm from 'components/c-form'
+import { CPane, CForm } from 'components'
+
 export default {
   data () {
     return {

@@ -17,35 +17,34 @@
 
 <script>
 import { CProgress, CToast } from 'components'
-
 import VHeader from 'views/common/v-header'
 import VFooter from 'views/common/v-footer'
 import store from 'vx/store'
-import { toasts } from 'vx/getters'
-import { setEnv } from 'vx/actions'
+import { mapGetters, mapActions } from 'vuex'
 import { routes } from 'routes'
 
 export default {
   name: 'App',
   store,
   computed: {
+    ...mapGetters(['lang', 'i18n', 'progress', 'toasts']),
     routes () {
       return navRoutes.call(this, routes, (key, route) => {
-        return key !== '/' && route.auth !== !this.env.authorized
+        return key !== '/' && route.auth !== !this.authorized
       })
     }
   },
-  created () {
-    // for get i18n in first
-    this.setEnv(this.env)
+
+  methods: {
+    ...mapActions(['setEnv']),
   },
 
-  vuex: {
-    getters: {
-      toasts
-    },
-    actions: {
-      setEnv
+  created () {
+    // for get i18n in first
+    if (!this.i18n) {
+      this.setEnv({
+        lang: this.lang
+      })
     }
   },
 

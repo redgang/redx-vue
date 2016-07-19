@@ -1,6 +1,5 @@
 import createLogger from 'vuex/logger'
-import createPromise from 'vuex-promise'
-import { setProgress, addToast } from '../utils'
+import createPromise from './createPromise'
 
 import {
   PROMISE_PENDING,
@@ -23,14 +22,14 @@ const plugins = [
     store.subscribe(({ meta, payload }) => {
       switch (meta) {
         case PROMISE_PENDING:
-          setProgress(60, store)
+          store.dispatch('setProgress', 60)
           break
         case PROMISE_SUCCESS:
-          setProgress(100, store)
+          store.dispatch('setProgress',100)
           break
         case PROMISE_FAILURE:
-          setProgress(100, store)
-          addToast(payload, store)
+          store.dispatch('setProgress',100)
+          store.dispatch('addToast', payload)
           break
         default:
           // setProgress(0)

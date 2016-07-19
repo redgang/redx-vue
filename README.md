@@ -23,13 +23,14 @@
   - 添加swipe例子
   - 简化components组件引用方式
   - 修改eslint配置项
+- 2016-7-19
+  - 简化vuex数据模型，升级到[vuex@2.0.0-rc.3](https://github.com/vuejs/vuex/releases/tag/v2.0.0-rc.1)
 
 ## Plans
 - 修改c-form组件用法
-- 升级到`vuex2.0`
 - 添加c-iscroll组件
 - 修改c-image组件，支持Lazyload
-
+- 数据缓存
 
 ## Quick Start
 

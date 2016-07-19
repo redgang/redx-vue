@@ -41,9 +41,7 @@ const config = {
   compiler_vendor: [
     'vue',
     'vue-router',
-    'vuex',
-    'vuex-localstorage',
-    'vuex-promise'
+    'vuex'
   ],
   // ----------------------------------
   // Test Configuration
