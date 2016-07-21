@@ -17,7 +17,7 @@ export default {
 
   route: {
     data () {
-      request(`./docs/${this.$route.params.name}`).then(text => {
+      request(`./docs/${this.$route.params.name}`, {proxyFlag : false}).then(text => {
         this.content = marked(text)
       })
     }

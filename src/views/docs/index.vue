@@ -38,7 +38,7 @@ export default {
 
   route: {
     data () {
-      request('./docs/README.md').then(text => {
+      request('./docs/README.md', {proxyFlag : false}).then(text => {
         const chapters = []
         // - [使用 vuex](vuex.md)
         const RE = /\-\s+\[([^\[\]\(\)]+)\]\(([^\[\]\(\)]+)\)\n/img

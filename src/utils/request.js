@@ -11,7 +11,8 @@ const defaultOptions = {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   },
-  method: 'GET'
+  method: 'GET',
+  proxyFlag : true
 }
 
 /**
@@ -103,14 +104,15 @@ function parseOptions({ url = '', query, params, rKey, mutate, ...options }) {
     url = replaceUrlWithParams(url, rKey)
   }
 
-  options.url = proxyUrl + url
+  options.url = !options.proxyFlag ? url : proxyUrl + url
 
   // mutate must be a function and return a promise
   // useful for add authorization
   if (mutate) {
     return mutate(options)
   }
-
+  //删除proxyFlag
+  delete options.proxyFlag
   return Promise.resolve(options)
 }
 
