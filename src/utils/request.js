@@ -1,7 +1,10 @@
+//https://github.com/github/fetch
 import 'whatwg-fetch'
 import Promise from 'nd-promise'
 import qs from 'querystring'
 import isPlainObj from 'is-plain-obj'
+
+const proxyUrl = __DEV__ ? '/api/' : ''
 
 const defaultOptions = {
   headers: {
@@ -13,21 +16,11 @@ const defaultOptions = {
 
 /**
  * request
- *
- *   request({
- *     url: 'path',
- *     query: { ... },
- *     params: { ... },
- *     body: { ... }
- *     headers: { ... }
- *   })
- *   request('path')
- *   request('path', { ... })
- *
  * @param  {String|Object} options   Options
  * @return {Promise}                 Promise
  */
-export default function request (...args) {
+
+export default function request(...args) {
   if (args.length === 0) {
     console.warn('URL or Options is Required!')
     return
@@ -50,19 +43,19 @@ export default function request (...args) {
   }
   return new Promise((resolve, reject) => {
     parseOptions(merge({}, defaultOptions, args[0]))
-    .then(({ url, ...options }) => fetch(url, options))
-    .then(res => {
-      if (res && res.status >= 200 && res.status < 400) {
-        getBody(res).then(resolve, reject)
-      } else {
-        getBody(res).then(reject)
-      }
-    })
-    .catch(reject)
+      .then(({ url, ...options }) => fetch(url, options))
+      .then(res => {
+        if (res && res.status >= 200 && res.status < 400) {
+          getResult(res).then(resolve, reject)
+        } else {
+          getResult(res).then(reject)
+        }
+      })
+      .catch(reject)
   })
 }
 
-function merge (src, ...args) {
+function merge(src, ...args) {
   args.forEach(arg => {
     Object.keys(arg).forEach(key => {
       if (isPlainObj(arg[key])) {
@@ -78,23 +71,23 @@ function merge (src, ...args) {
   return src
 }
 
-function getBody (res) {
+function getResult(res) {
   const type = res.headers.get('Content-Type')
   return (type && type.indexOf('json') !== -1) ? res.json() : res.text()
 }
 
-function parseOptions ({ url = '', query, params, body, mutate, ...options }) {
-  if (body) {
-    if (typeof body === 'object') {
+function parseOptions({ url = '', query, params, rKey, mutate, ...options }) {
+  if (params) {
+    if (typeof params === 'object') {
       if (/^(POST|PUT|PATCH)$/i.test(options.method)) {
-        body = JSON.stringify(body)
+        params = JSON.stringify(params)
       } else {
-        url += ((url.indexOf('?') !== -1) ? '&' : '?') + qs.stringify(body)
-        body = null
+        url += ((url.indexOf('?') !== -1) ? '&' : '?') + qs.stringify(params)
+        params = null
       }
     }
-    if (body) {
-      options.body = body
+    if (params) {
+      options.body = params
     }
   }
 
@@ -106,11 +99,11 @@ function parseOptions ({ url = '', query, params, body, mutate, ...options }) {
   }
 
   // 替换地址中的宏变量：{xyz}
-  if (params) {
-    url = replaceUrlWithParams(url, params)
+  if (rKey) {
+    url = replaceUrlWithParams(url, rKey)
   }
 
-  options.url = url
+  options.url = proxyUrl + url
 
   // mutate must be a function and return a promise
   // useful for add authorization
@@ -121,7 +114,7 @@ function parseOptions ({ url = '', query, params, body, mutate, ...options }) {
   return Promise.resolve(options)
 }
 
-function replaceUrlWithParams (url, params) {
+function replaceUrlWithParams(url, params) {
   // from: https://github.com/Matt-Esch/string-template
   return url.replace(/\{(\w+)\}/g, function (match, key, index) {
     let result

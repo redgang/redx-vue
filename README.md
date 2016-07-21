@@ -25,6 +25,8 @@
   - 修改eslint配置项
 - 2016-7-19
   - 简化vuex数据模型，升级到[vuex@2.0.0-rc.3](https://github.com/vuejs/vuex/releases/tag/v2.0.0-rc.1)
+- 2016-7-21
+  - 修改request，支持请求代理
 
 ## Plans
 - 修改c-form组件用法

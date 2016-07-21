@@ -26,8 +26,8 @@ const getters = {
 const actions = {
   getCommits ({ commit }, payload) {
     commit(GET_COMMITS, request('{base}/commits?per_page=3&sha=', {
-      params: {
-        base: 'https://api.github.com/repos/redgang/base'
+      rKey: {
+        base: 'repos/redgang/base'
       },
       headers: {
         'Accept': 'application/vnd.github.v3+json'
