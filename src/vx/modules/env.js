@@ -37,8 +37,8 @@ const actions = {
     commit(SET_ENV, payload)
 
     if (payload.lang) {
-      commit(SET_ENV_I18N, request({
-        url: `./i18n/${payload.lang}.json`
+      commit(SET_ENV_I18N, request(`./i18n/${payload.lang}.json`, {
+        proxyFlag : false
       }))
     }
   }

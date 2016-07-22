@@ -27,6 +27,9 @@
   - 简化vuex数据模型，升级到[vuex@2.0.0-rc.3](https://github.com/vuejs/vuex/releases/tag/v2.0.0-rc.1)
 - 2016-7-21
   - 修改request，支持请求代理
+- 2016-7-22
+  - 完善docs文档，修复window系统无法访问docs路由
+  - 修复国际化请求代理问题
 
 ## Plans
 - 修改c-form组件用法

@@ -10,7 +10,7 @@
   },
   "routes": {
     "demo" : "Demo",
-    "docs": "Documentation",
+    "docs": "Docs",
     "about": "About",
     "login": "Login",
     "logout": "Logout"

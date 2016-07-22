@@ -1,7 +1,5 @@
 ## [request](https://github.com/github/fetch) 用法
 
-### request用法
-
 > 默认GET请求，支持GET、POST、PUT、DELETE、PATCH等 
 
  -  用法一：
@@ -16,8 +14,8 @@
     ```
     request('url', options)
     ```
- 
- ### options配置
+
+> options配置
 
  ```options
    {

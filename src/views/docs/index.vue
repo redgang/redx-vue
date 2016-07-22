@@ -38,17 +38,14 @@ export default {
 
   route: {
     data () {
-      request('./docs/README.md', {proxyFlag : false}).then(text => {
+      request('./docs/index.json', { proxyFlag : false }).then(text => {
         const chapters = []
-        // - [使用 vuex](vuex.md)
-        const RE = /\-\s+\[([^\[\]\(\)]+)\]\(([^\[\]\(\)]+)\)\n/img
-        let matched
-        while ((matched = RE.exec(text))) {
+        Object.keys(text).forEach(val => {
           chapters.push({
-            label: matched[1],
-            value: matched[2]
+            label: val,
+            value: text[val]
           })
-        }
+        })
         this.chapter = this.$route.params.name || chapters[0].value
         this.chapters = chapters
       })

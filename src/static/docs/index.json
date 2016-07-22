@@ -1,0 +1,7 @@
+{
+    "vuex": "vuex.md",
+    "router": "router.md",
+    "iconFont": "iconfont.md",
+    "css": "theme.md",
+    "request" : "request.md"
+}
