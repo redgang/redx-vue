@@ -17,7 +17,8 @@
   },
   "demo": {
     "form": "form",
-    "swipe" : "swipe"
+    "swipe" : "swipe",
+    "iscroll" : "iscroll"
   },
   "view": {
     "message": "{0}, The beginning is the most important part of the work.",

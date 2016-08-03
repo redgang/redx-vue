@@ -3,6 +3,19 @@ import _debug from 'debug'
 import path from 'path'
 import { argv } from 'yargs'
 
+let os = require('os'), hostName, localIP = '';
+if (os) {
+  let networkIO = os.networkInterfaces()['以太网'] || os.networkInterfaces().en0;
+  if (networkIO) {
+    for (let i = 0; i < networkIO.length; i++) {
+      if (networkIO[i].family == 'IPv4') {
+        localIP = networkIO[i].address;
+        break;
+      }
+    }
+  }
+}
+
 const debug = _debug('app:config:_base')
 const config = {
   env: process.env.NODE_ENV || 'development',
@@ -18,7 +31,7 @@ const config = {
   // ----------------------------------
   // Server Configuration
   // ----------------------------------
-  server_host: 'localhost',
+  server_host: localIP || 'localhost',
   server_port: process.env.PORT || 3200,
   server_mock: !!argv.mock,
 
@@ -32,7 +45,7 @@ const config = {
   compiler_fail_on_warning: false,
   compiler_quiet: false,
   compiler_public_path: '/',
-  compiler_gzip : false,
+  compiler_gzip: false,
   compiler_stats: {
     chunks: false,
     chunkModules: false,
@@ -75,6 +88,7 @@ config.globals = {
   '__PROD__': config.env === 'production',
   '__DEBUG__': config.env === 'development' && !argv.no_debug,
   '__TEST__': config.env === 'test',
+  '__LocalServer__': JSON.stringify(localIP || 'localhost'),
   '__BASENAME__': JSON.stringify(process.env.BASENAME || '')
 }
 

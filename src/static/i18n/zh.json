@@ -17,7 +17,8 @@
   },
   "demo": {
     "form": "表单",
-    "swipe" : "图片滚动"
+    "swipe" : "图片滚动",
+    "iscorll" : "iscroll滚动"
   },
   "view": {
     "message": "{0}，好的开始是成功的一半！",

@@ -123,7 +123,7 @@ const APP_ENTRY_PATH = ["babel-polyfill", paths.client('index.js')]
 webpackConfig.entry = {
   app: __DEV__
     ? APP_ENTRY_PATH.concat(`webpack-hot-middleware/client?path=${config.compiler_public_path}__webpack_hmr`)
-    : [APP_ENTRY_PATH],
+    : APP_ENTRY_PATH,
   vendor: config.compiler_vendor
 }
 

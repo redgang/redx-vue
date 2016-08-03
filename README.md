@@ -30,12 +30,17 @@
 - 2016-7-22
   - 完善docs文档，修复window系统无法访问docs路由
   - 修复国际化请求代理问题
+- 2016-8-3
+  - 添加iscroll指令及demo用法，用法参考[vue-infinite-scroll](https://github.com/ElemeFE/vue-infinite-scroll)
+  - 修改执行`deploy:prod`报错问题
+  - 将vx目录改成store，有助理解vuex数据
+  - 修改docs样式
 
 ## Plans
 - 修改c-form组件用法
-- 添加c-iscroll组件
 - 修改c-image组件，支持Lazyload
 - 数据缓存
+- 添加生产动态二维码，方便手机调试
 
 ## Quick Start
 
@@ -95,6 +100,7 @@ redx-vue
     ├── components                      #ui组件库（目前自建）
     ├── plugins                         #插件库
     │   ├── i18n
+    │   ├── iscroll
     │   └── validator
     ├── routes                          ＃路由
     ├── static                          ＃静态文件
@@ -114,10 +120,7 @@ redx-vue
     │   ├── common                      
     │   ├── demo                        
     │   └── docs                        
-    └── vx                              ＃vuex数据管理
-        ├── actions
-        ├── constants
-        ├── getters
+    └── store                              ＃vuex数据管理
         ├── plugins
         └── modules
 ```
@@ -130,6 +133,7 @@ redx-vue
 - [vue-cli](https://github.com/vuejs/vue-cli)
 - [vue-devtools](https://github.com/vuejs/vue-devtools)
 - [awesome-vue](https://github.com/vuejs/awesome-vue)
+- [plato Boilerplate](https://github.com/crossjs/plato)
 
 ## License
 

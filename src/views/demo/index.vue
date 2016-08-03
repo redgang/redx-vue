@@ -34,6 +34,15 @@
             extra: {
               isLink: true
             }
+          }, {
+            label: 'iscroll',
+            value: this.__('demo.iscroll'),
+            click () {
+              router.go('/demo/iscroll')
+            },
+            extra: {
+              isLink: true
+            }
           }]
         }]
       }

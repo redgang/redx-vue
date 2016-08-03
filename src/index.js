@@ -2,9 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Validator from 'plugins/validator'
 import I18n from 'plugins/i18n'
+import IScroll from 'plugins/iScroll'
 import App from 'app'
 import { routes, alias } from 'routes'
-import store from 'vx/store'
+import store from 'store'
 
 if (module.hot) {
   module.hot.accept()
@@ -15,6 +16,9 @@ Vue.config.debug = __DEV__
 
 // form validator use
 Vue.use(Validator)
+
+// iscroll use
+Vue.use(IScroll);
 
 // I18n use
 Vue.use(I18n, {

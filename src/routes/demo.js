@@ -11,6 +11,10 @@ export default {
     '/swipe': {
       name: 'demo/swipe',
       component: resolve => require(['views/demo/swipe'], resolve)
+    },
+    '/iscroll': {
+      name: 'demo/swipe',
+      component: resolve => require(['views/demo/iscroll'], resolve)
     }
   }
 }

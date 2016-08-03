@@ -19,7 +19,7 @@
 import { CProgress, CToast } from 'components'
 import VHeader from 'views/common/v-header'
 import VFooter from 'views/common/v-footer'
-import store from 'vx/store'
+import store from 'store'
 import { mapGetters, mapActions } from 'vuex'
 import { routes } from 'routes'
 
