@@ -13,7 +13,7 @@
 ## Change Logs
 - 2016-8-5
   - 修护iscroll滚动缓慢问题
-  - 添加动态二维码，方便手机扫码调试
+  - 添加动态二维码组件`c-qrcode`，方便手机扫码调试
 - 2016-8-3
   - 添加iscroll指令及demo用法，用法参考[vue-infinite-scroll](https://github.com/ElemeFE/vue-infinite-scroll)
   - 修改执行`deploy:prod`报错问题

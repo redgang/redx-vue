@@ -16,12 +16,6 @@
   height:100%;
 }
 
-.img-pos{
-   position:fixed; 
-   top:50%; 
-   right:0;
-}
-
 [v-cloak] {
   display: none;
 }
