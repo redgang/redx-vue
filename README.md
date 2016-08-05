@@ -11,6 +11,26 @@
 - ES6
 
 ## Change Logs
+- 2016-8-5
+  - 修护iscroll滚动缓慢问题
+  - 添加动态二维码，方便手机扫码调试
+- 2016-8-3
+  - 添加iscroll指令及demo用法，用法参考[vue-infinite-scroll](https://github.com/ElemeFE/vue-infinite-scroll)
+  - 修改执行`deploy:prod`报错问题
+  - 将vx目录改成store，有助理解vuex数据
+  - 修改docs样式
+- 2016-7-22
+  - 完善docs文档，修复window系统无法访问docs路由
+  - 修复国际化请求代理问题
+- 2016-7-21
+  - 修改request，支持请求代理
+- 2016-7-19
+  - 简化vuex数据模型，升级到[vuex@2.0.0-rc.3](https://github.com/vuejs/vuex/releases/tag/v2.0.0-rc.1)
+- 2016-7-13
+  - 添加c-swipe组件
+  - 添加swipe例子
+  - 简化components组件引用方式
+  - 修改eslint配置项
 - 2016-7-8
   - 升级vuex，将vuex-fsa升级到vuex的^1.0.0-rc.2版本
   - 修改中间件文件夹middlewares->plugins，用法与官方统一[vuex1.0](http://vuex.vuejs.org/en/plugins.html)
@@ -18,29 +38,12 @@
   - 更新相关文档
   - 引入postcss-functions，支持css中运用function
   - 修改toast错误提示背景色
-- 2016-7-13
-  - 添加c-swipe组件
-  - 添加swipe例子
-  - 简化components组件引用方式
-  - 修改eslint配置项
-- 2016-7-19
-  - 简化vuex数据模型，升级到[vuex@2.0.0-rc.3](https://github.com/vuejs/vuex/releases/tag/v2.0.0-rc.1)
-- 2016-7-21
-  - 修改request，支持请求代理
-- 2016-7-22
-  - 完善docs文档，修复window系统无法访问docs路由
-  - 修复国际化请求代理问题
-- 2016-8-3
-  - 添加iscroll指令及demo用法，用法参考[vue-infinite-scroll](https://github.com/ElemeFE/vue-infinite-scroll)
-  - 修改执行`deploy:prod`报错问题
-  - 将vx目录改成store，有助理解vuex数据
-  - 修改docs样式
 
 ## Plans
 - 修改c-form组件用法
 - 修改c-image组件，支持Lazyload
 - 数据缓存
-- 添加生产动态二维码，方便手机调试
+- components组件目录化，将样式移到对应组件文件夹中
 
 ## Quick Start
 

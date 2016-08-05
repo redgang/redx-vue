@@ -1,3 +1,10 @@
+html, body{
+   height: 100%;
+   background-color: var(--background);
+   -webkit-overflow-scrolling: touch;
+   -webkit-user-select: none;
+}
+
 html {
   font: 1em/1.5 Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
 }
@@ -5,7 +12,6 @@ html {
 body {
   font-size: 1rem;
   color: color(black lightness(20%));
-  background-color: var(--background);
 }
 
 body, h1, h2, h3, h4, h5, h6, p, dl, dd, form, ul, ol, pre, blockquote, textarea, input, figure, button {
