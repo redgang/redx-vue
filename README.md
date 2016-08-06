@@ -75,7 +75,8 @@ $ npm start
 |npm start|Run webpack and server with hot-reload enabled|
 |npm run deploy|Build assets for development use, dumped in `./dist`|
 |npm run deploy:prod|Build assets for production use, dumped in `./dist`|
-|npm run deploy:start|Run static server to check `dist` files|
+|npm run start:prod|Run static server to check `dist` files|
+|npm run weinre|Run weinre server|
 
 
 ## Regulation
