@@ -34,6 +34,7 @@ const config = {
   server_host: localIP || 'localhost',
   server_port: process.env.PORT || 3200,
   server_mock: !!argv.mock,
+  weinreFlag : !!argv.weinre,
 
   // ----------------------------------
   // Compiler Configuration
@@ -88,7 +89,8 @@ config.globals = {
   '__PROD__': config.env === 'production',
   '__DEBUG__': config.env === 'development' && !argv.no_debug,
   '__TEST__': config.env === 'test',
-  '__LocalServer__': JSON.stringify(localIP || 'localhost'),
+  '__WEINRE__': config.weinreFlag,
+  '__LOCALHOST__': JSON.stringify(config.server_host),
   '__BASENAME__': JSON.stringify(process.env.BASENAME || '')
 }
 

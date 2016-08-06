@@ -56,3 +56,7 @@ router.afterEach(transition => {
 })
 
 router.start(App, 'app')
+
+if(__DEV__ && __WEINRE__){
+  document.write('<script src="http://' + __LOCALHOST__ + ':8099/target/target-script-min.js#anonymous"></script>')
+}

@@ -14,12 +14,19 @@
     "start": "better-npm-run start",
     "start:prod": "better-npm-run start:prod",
     "dev": "better-npm-run dev",
-    "dev:nw": "npm run dev -- --nw",
+    "dev:weinre": "npm run dev -- --weinre",
     "dev:no-debug": "npm run dev -- --no_debug",
     "deploy": "better-npm-run deploy",
-    "deploy:prod": "better-npm-run deploy:prod"
+    "deploy:prod": "better-npm-run deploy:prod",
+    "weinre" : "better-npm-run weinre"
   },
   "betterScripts": {
+    "weinre" : {
+      "command": "node node_modules/weinre/weinre -httpPort 8099 --boundHost -all-",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
     "compile": {
       "command": "babel-node bin/compile",
       "env": {
@@ -135,6 +142,7 @@
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0",
+    "weinre": "2.0.0-pre-I0Z7U9OV",
     "yargs": "^4.7.1"
   },
   "dependencies": {

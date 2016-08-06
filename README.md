@@ -11,6 +11,8 @@
 - ES6
 
 ## Change Logs
+- 2016-8-6
+  - 添加weinre手机调试功能
 - 2016-8-5
   - 修护iscroll滚动缓慢问题
   - 添加动态二维码组件`c-qrcode`，方便手机扫码调试
@@ -69,6 +71,7 @@ $ npm start
 |---|---|
 |npm install|Install dependencies|
 |npm run dev|Run webpack and restart server with hot-reload enabled|
+|npm run dev:weinre|Run webpack and restart server with hot-reload enabled and open weinre function|
 |npm start|Run webpack and server with hot-reload enabled|
 |npm run deploy|Build assets for development use, dumped in `./dist`|
 |npm run deploy:prod|Build assets for production use, dumped in `./dist`|
