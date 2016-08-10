@@ -17,7 +17,7 @@
         <small class="date">@ {{record.commit.author.date | datetime 'yyyy-MM-dd hh:mm'}}</small>
       </c-cell>
     </c-pane>
-    <c-image src="images/logo.png" width="200" height="200"></c-image>
+    <c-image :src="getSrc" width="200" height="200"></c-image>
   </div>
 </template>
 
@@ -25,6 +25,7 @@
 import datetime from 'nd-datetime'
 import { CForm, CPane, CGroup, CTitle, CLoading, CImage, CCell } from 'components'
 import { mapGetters, mapActions } from 'vuex'
+import logo from './images/logo.png'
 
 export default {
   data () {
@@ -55,6 +56,9 @@ export default {
           }
         }
       }
+    },
+    getSrc(){
+      return logo
     }
   },
 

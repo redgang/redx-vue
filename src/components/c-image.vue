@@ -1,17 +1,14 @@
 <template>
   <div :class="['c-image', class]">
-    <img class="c-image-img"
-      :src="src"
-      :width="width"
-      :height="height"
-      :alt="alt"
-      :title="title"
-      @load="_load">
+    <img class="c-image-img" :src="getSrc" :width="width" :height="height" :alt="alt" :title="title" @load="_load">
   </div>
 </template>
 
 <script>
+const imageUrl = __DEV__ ? '/api/' : ''
+
 export default {
+  name: 'c-image',
   props: {
     class: {
       type: String,
@@ -40,6 +37,17 @@ export default {
     keepRatio: {
       type: Boolean,
       default: true
+    }
+  },
+  computed:{
+    getSrc(){
+      //imgFlag为true是网络图片
+      const imgFlag = /.(png|jpg|gif|svg)$/ig.test(this.src)
+      if(imgFlag){
+        return imageUrl + this.src
+      }else{
+        return this.src
+      }
     }
   },
 

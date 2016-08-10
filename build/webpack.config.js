@@ -134,7 +134,7 @@ webpackConfig.output = {
   path: paths.dist(),
   publicPath: config.compiler_public_path,
   filename: `[name].[${config.compiler_hash_type}].js`,
-  chunkFilename: `[id].[${config.compiler_hash_type}].js`
+  chunkFilename: __DEV__ ? `[id].[${config.compiler_hash_type}].js` : `js/[id].[${config.compiler_hash_type}].js`
 }
 
 // ------------------------------------
@@ -210,13 +210,14 @@ webpackConfig.module.loaders = [
     loader: 'json'
   },
   {
-    test: /\.(png|jpg|gif|svg|woff2?|eot|otf|ttf)(\?.*)?$/,
+    test: /\.(png|jpe?g|gif|svg|woff2?|eot|otf|ttf)(\?.*)?$/,
     loader: 'url',
     query: {
       limit: 10000,
-      name: '[name].[ext]?[hash:7]'
+      name: 'images/[hash:16].[ext]?[name]'
     }
-  },...styleLoaders()]
+  }
+  ,...styleLoaders()]
 
 
 // ------------------------------------

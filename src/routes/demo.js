@@ -2,7 +2,7 @@ export default {
   name: 'demo',
   title: 'routes.demo',
   hidden: __DEV__ ? 0 : 1,
-  component: resolve => require(['views/demo/index'], resolve),
+  component: resolve => require(['views/demo'], resolve),
   subRoutes: {
     '/form': {
       name: 'demo/form',

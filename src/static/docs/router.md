@@ -63,7 +63,7 @@ export default {
 // 如果无需异步加载，直接 require 即可
 export default {
   name: 'demo',
-  component: resolve => require(['views/demo/index'], resolve),
+  component: resolve => require(['views/demo'], resolve),
   subRoutes: {
     '/form': {
       name: 'demo/form',
